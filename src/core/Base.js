@@ -1,6 +1,6 @@
 import React from "react";
 import Menu from "./menu";
- 
+
 const Base = ({
   title = "My Title",
   description = "My desription",
@@ -16,7 +16,7 @@ const Base = ({
       </div>
       <div className={className}>{children}</div>
     </div>
-  
+   
   </div>
 );
 

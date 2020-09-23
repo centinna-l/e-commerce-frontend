@@ -1,25 +1,24 @@
 import React from "react";
+import "../styles.css";
 import { API } from "../backend";
 import Base from "./Base";
-import "../styles.css";
 
-const Home = () => {
+export default function Home() {
   console.log("API IS", API);
+
   return (
-    <Base title="Home Page" description="An Interactive E Commerce Site">
+    <Base title="Home Page" description="Welcome to the Tshirt Store">
       <div className="row">
-        <div className="row col-4">
-          <button className="btn btn-success">Test</button>
+        <div className="col-4">
+          <button className="btn btn-success">TEST</button>
         </div>
-        <div className="row col-4">
-          <button className="btn btn-success">Test</button>
+        <div className="col-4">
+          <button className="btn btn-success">TEST</button>
         </div>
-        <div className="row col-4">
-          <button className="btn btn-success">Test</button>
+        <div className="col-4">
+          <button className="btn btn-success">TEST</button>
         </div>
       </div>
     </Base>
   );
-};
-
-export default Home;
+}
