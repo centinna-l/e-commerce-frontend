@@ -5,12 +5,14 @@ import Signup from "./user/Signup";
 import Signin from "./user/Signin";
 import AdminRoute from "./auth/helper/AdminRoutes";
 import PrivateRoute from "./auth/helper/PrivateRoutes";
-import UserDashboard from "./user/UserDashBoard";
+import UserDashBoard from "./user/UserDashBoard";
 import AdminDashBoard from "./user/AdminDashBoard";
 import AddCategory from "./admin/AddCategory";
 import ManageCategories from "./admin/ManageCategories";
 import AddProduct from "./admin/AddProduct";
-
+import ManageProducts from "./admin/ManageProducts";
+import { updateProduct } from "./admin/helper/adminapicall";
+import UpdateProduct from "./admin/UpdateProduct";
 
 const Routes = () => {
   return (
@@ -19,7 +21,7 @@ const Routes = () => {
         <Route path="/" exact component={Home} />
         <Route path="/signup" exact component={Signup} />
         <Route path="/signin" exact component={Signin} />
-        <PrivateRoute path="/user/dashboard" exact component={UserDashboard} />
+        <PrivateRoute path="/user/dashboard" exact component={UserDashBoard} />
         <AdminRoute path="/admin/dashboard" exact component={AdminDashBoard} />
         <AdminRoute
           path="/admin/create/category"
@@ -32,6 +34,8 @@ const Routes = () => {
           component={ManageCategories}
         />
         <AdminRoute path="/admin/create/product" exact component={AddProduct} />
+        <AdminRoute path="/admin/products" exact component={ManageProducts} />
+        <AdminRoute path="/admin/product/update/:productId" exact component={UpdateProduct} />
       </Switch>
     </BrowserRouter>
   );
