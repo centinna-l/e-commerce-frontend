@@ -1,6 +1,6 @@
 import React, { Fragment } from "react";
 import { Link, withRouter } from "react-router-dom";
-import { signout, isAutheticated } from "../auth/helper/index";
+import { signout, isAutheticated } from "../auth/helper";
 
 const currentTab = (history, path) => {
   if (history.location.pathname === path) {
@@ -34,7 +34,7 @@ const Menu = ({ history }) => (
             className="nav-link"
             to="/user/dashboard"
           >
-            Dashboard
+            U. Dashboard
           </Link>
         </li>
       )}
@@ -72,7 +72,7 @@ const Menu = ({ history }) => (
         </Fragment>
       )}
       {isAutheticated() && (
-        <li className="nav-item ">
+        <li className="nav-item">
           <span
             className="nav-link text-warning"
             onClick={() => {
@@ -81,7 +81,7 @@ const Menu = ({ history }) => (
               });
             }}
           >
-            Sign Out
+            Signout
           </span>
         </li>
       )}
